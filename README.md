@@ -30,6 +30,3 @@ Tips
 * Meshlab is a nice tool for viewing PLY point clouds.
 
 [Fork me on Github](https://github.com/0xtob/gcam2ply)
-=======
-
-Create 3D point clouds from depth images captured with the lens blur feature of the Google Camera app for Android.
