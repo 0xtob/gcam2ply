@@ -10,5 +10,14 @@ if [ $# -ne 5 ] ; then
 fi
 
 DEPTHFILE=$1.depth.png
-exiftool -b -XMP:Data $1 | base64 -d > $DEPTHFILE
+if [ `uname` = "Linux" ] ; then
+    B64DECODEFLAG=d;
+elif [ `uname` = "Darwin" ] ; then
+    B64DECODEFLAG=D;
+else
+    echo "Unsupported operating system."
+    exit
+fi
+
+exiftool -b -XMP:Data $1 | base64 -$B64DECODEFLAG > $DEPTHFILE
 exiftool -j -XMP:Near -XMP:Far -XMP:Format $1 | ./gcam2ply.py $DEPTHFILE $3 $4 $5 > $2

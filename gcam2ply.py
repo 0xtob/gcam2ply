@@ -1,7 +1,8 @@
-#!/usr/bin/python
+#!/usr/bin/env python
 
 import sys, os, json
 import scipy
+import scipy.misc
 
 docstr = """gcam2ply.py - 2014 by Tobias Weyand (me@tobw.net)
 
