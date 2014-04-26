@@ -1,5 +1,7 @@
 gcam2ply
 ========
+![gcam2ply diagram](/diagram.png)
+
 Creates a 3D point cloud (PLY) from a depth image captured with the lens blur
 feature of the Google Camera app for Android.
 
